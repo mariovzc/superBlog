@@ -22,6 +22,7 @@ group :development, :test do
   gem 'selenium-webdriver'
   gem 'rspec-rails', '~> 3.6'
   gem 'shoulda'
+  gem 'railroady'
 end
 
 group :development do
