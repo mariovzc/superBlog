@@ -1,24 +1,56 @@
-# README
+# SuperBlog
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
 
-* Ruby version
+Desafio de MakeitReal.
 
-* System dependencies
+Funcionalidades:
 
-* Configuration
+  - Registrarse
+  - Ingresar
+  - Listar Posts
+  - Ver Post
+  - Crear Post
+  - Editar Post
+  - Eliminar Post
+  - Comentar Post
 
-* Database creation
 
-* Database initialization
 
-* How to run the test suite
+### Gemas
 
-* Services (job queues, cache servers, search engines, etc.)
+* [Rspec]
+* [BetterErrors] 
+* [Shoulda]
+* [Railroady]
 
-* Deployment instructions
 
-* ...
+### Installation
+
+
+```sh
+$ cd superBlog
+$ bundle install
+$ rake db:migrate && rake db:seed
+$ rails s
+```
+
+### Todos
+
+ - Agregar Valoracion.
+
+License
+----
+
+MIT
+
+
+**Free Software, Hell Yeah!**
+
+[//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
+
+
+   [Rspec]: <https://github.com/rspec/rspec-rails>
+   [BetterErrors]: <https://github.com/charliesome/better_errors> 
+   [Shoulda]: <https://github.com/thoughtbot/shoulda>
+   [Railroady]: <https://github.com/preston/railroady>
