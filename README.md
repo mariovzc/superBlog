@@ -23,6 +23,7 @@ Funcionalidades:
 * [BetterErrors] 
 * [Shoulda]
 * [Railroady]
+* [Sorcery]
 
 
 ### Installation
@@ -54,3 +55,4 @@ MIT
    [BetterErrors]: <https://github.com/charliesome/better_errors> 
    [Shoulda]: <https://github.com/thoughtbot/shoulda>
    [Railroady]: <https://github.com/preston/railroady>
+   [Sorcery]: <https://github.com/NoamB/sorcery>
