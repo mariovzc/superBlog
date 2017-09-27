@@ -6,9 +6,15 @@ class PostsController < ApplicationController
   end
 
   def new
+    @post = Post.new()
   end
 
   def create
+    post = Post.new(post_params)
+    if post.save
+    else
+      render :new
+    end
   end
 
   def show
@@ -18,7 +24,11 @@ class PostsController < ApplicationController
   end
 
   def update
-    
+    if @client.update(client_params)
+      
+    else
+      render :edit
+    end
   end
   
   private
