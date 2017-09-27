@@ -2,7 +2,8 @@ class User < ApplicationRecord
   authenticates_with_sorcery!
 
   has_many :posts
-
+  has_many :comments
+  
   #Validations
   validates :password,
             length: { minimum: 6 , message: 'is too short (minimum is 6 characters)'},
