@@ -1,0 +1,18 @@
+<div class="app-bar">
+  <%= link_to  '<i class="material-icons">home</i>'.html_safe, root_path, class:'app-bar-element' %>
+  <span class="app-bar-divider"></span>
+  <div class="app-bar-element place-right">
+    <a class="dropdown-toggle fg-white"> Log In</a>
+    <div class="app-bar-drop-container bg-white fg-dark place-right" data-role="dropdown" data-no-close="true">
+      <div class="padding20">
+        <%= render 'shared/nav-login'%>
+      </div>
+    </div>
+  </div>
+  <div class="app-bar-element place-right">
+      <ul class="app-bar-menu">
+        <li><a href="">Register</a></li>
+      </ul>
+  </div>
+
+</div>
