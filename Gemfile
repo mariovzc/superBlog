@@ -15,6 +15,7 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'sorcery'
 gem 'will_paginate', '~> 3.1.0'
+gem 'non-stupid-digest-assets'
 
 
 group :development, :test do
