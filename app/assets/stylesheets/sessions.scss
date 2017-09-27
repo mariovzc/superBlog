@@ -4,7 +4,7 @@
 
 .login-form {
   width: 25rem;
-  height: 18.75rem;
+  height: auto;
   position: fixed;
   top: 50%;
   margin-top: -9.375rem;
@@ -14,4 +14,8 @@
   opacity: 0;
   -webkit-transform: scale(.8);
   transform: scale(.8);
+}
+.red{
+  background-color: #ce352c !important;
+  text-align: center;
 }

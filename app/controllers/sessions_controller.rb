@@ -9,8 +9,8 @@ class SessionsController < ApplicationController
       flash[:success] = 'Welcome back!'
       redirect_to root_path
     else
-      flash.now[:warning] = 'E-mail and/or password is incorrect.'
-      render 'new'
+      flash[:warning] = 'E-mail and/or password is incorrect.'
+      redirect_to :log_in
     end
   end
 

@@ -1,7 +1,5 @@
-<div class="login-form padding20 block-shadow" style="opacity: 1; transform: scale(1); transition: 0.5s;">
-
+ <div class="login-form padding20 block-shadow" style="opacity: 1; transform: scale(1); transition: 0.5s;">
   <%= form_tag sessions_path, method: :post do %>
-    
       <h1 class="text-light">Login to service</h1>
       <hr class="thin">
       <br>
@@ -23,6 +21,7 @@
           <%= submit_tag 'Log In', class: 'button primary' %>          
           <%= link_to  "Cancel", root_path, class: 'button link' %>
       </div>
+      <%= render 'shared/flash' %>      
   <% end %>
     
     
