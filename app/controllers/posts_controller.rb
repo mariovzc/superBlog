@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   before_action :set_post, only: [:edit, :show,:update,:destroy]
   
   def index
-    @posts = Post.paginate(:page => params[:page], :per_page => 5)    
+    @posts = Post.order('created_at DESC').paginate(:page => params[:page], :per_page => 5)    
   end
 
   def new
@@ -42,7 +42,7 @@ class PostsController < ApplicationController
   private
 
   def set_post
-    @post = Post.find(params[:id])
+    @post = current_user.posts.find(params[:id])
   end
 
   def post_params
