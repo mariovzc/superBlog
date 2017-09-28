@@ -15,9 +15,8 @@
             </div>
           <% end %>          
           </br> </br>
-          <% if current_user == post.user%>
-          <button class="button primary">Editar</button>
-          <button class="button primary">Borrar</button>
+          <% if current_user == post.user%>          
+            <%=render 'post_actions', post: post %>
           <%end%>
         </li>
         <% end %>
