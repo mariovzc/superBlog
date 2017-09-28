@@ -2,6 +2,7 @@
     <%= form_for @post do |f| %>    
       <h1 class="text-light">New Post</h1>
       <hr class="thin">
+      <%=render 'shared/errors', object: f.object%>
       <%=render 'form', f: f ,action: 'Create'%>
     <%end%>
 </div>  
