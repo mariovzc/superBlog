@@ -1,2 +1,19 @@
-<h1>Posts#show</h1>
-<p>Find me in app/views/posts/show.html.erb</p>
+<div class="row cells12">
+  <div class="cell offset4 colspan6">
+    <h2 class="no-margin-top"><%=@post.title%></h2>
+    <hr class="bg-blue">
+    <div class="text-accent" style="color:dimgrey">
+      <%=@post.body%>           
+      <br> <br>
+      <div class="text-secondary">
+        Last Edit: <%=time_ago_in_words(@post.updated_at)%>
+      </div>
+    </div>
+    </br> </br>
+    <% if current_user == @post.user%>
+    <button class="button primary">Editar</button>
+    <button class="button primary">Borrar</button>
+    <%end%>
+  </div>
+  <div class="cell"></div>
+</div>

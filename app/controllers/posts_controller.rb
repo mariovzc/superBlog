@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
-  skip_before_action :require_login, only: [:index]
+  skip_before_action :require_login, only: [:index, :show]
+  before_action :set_post, only: [:edit, :show,:update,:destroy]
   
   def index
     @posts = Post.paginate(:page => params[:page], :per_page => 5)    
