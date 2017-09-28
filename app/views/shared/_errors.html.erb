@@ -1,4 +1,4 @@
-<%if object.errors%>
+<%if !object.errors.blank?%>
 <script>
   $.Notify({
     caption: "The form contains <%= pluralize(object.errors.count, 'error') %>.",
