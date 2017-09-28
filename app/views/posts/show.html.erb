@@ -3,7 +3,7 @@
     <h2 class="no-margin-top align-center leader"><%=@post.title%></h2>
     <hr class="bg-blue">
     <div class="text-accent" style="color:dimgrey">
-      <%=@post.body%>           
+      <%=markdown(@post.body)%>           
       <br> <br>
       <div class="text-secondary">
         Last Edit: <%=time_ago_in_words(@post.updated_at)%>ago </br> 

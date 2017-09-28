@@ -100,8 +100,6 @@ GEM
     nio4r (2.1.0)
     nokogiri (1.8.1)
       mini_portile2 (~> 2.3.0)
-    non-stupid-digest-assets (1.0.9)
-      sprockets (>= 2.0)
     oauth (0.5.1)
     oauth2 (1.2.0)
       faraday (>= 0.8, < 0.10)
@@ -142,6 +140,7 @@ GEM
     rb-fsevent (0.10.2)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
+    redcarpet (3.3.4)
     rspec-core (3.6.0)
       rspec-support (~> 3.6.0)
     rspec-expectations (3.6.0)
@@ -230,10 +229,10 @@ DEPENDENCIES
   capybara (~> 2.13)
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
-  non-stupid-digest-assets
   puma (~> 3.7)
   railroady
   rails (~> 5.1.4)
+  redcarpet
   rspec-rails (~> 3.6)
   sass-rails (~> 5.0)
   selenium-webdriver
