@@ -4,13 +4,14 @@
         <% @posts.each do |post| %>
         <li>
           <%= link_to  post_path(post) do %>            
-            <h2 class="no-margin-top"><%=post.title%></h2>
+            <h2 class="no-margin-top leader"><%=post.title%></h2>
             <hr class="bg-blue">
             <div class="text-accent" style="color:dimgrey">
               <%=truncate(post.body, lenght: 40, separator: '', omission: '... (More)')%>
               <br> <br>
               <div class="text-secondary">
-                Created: <%=time_ago_in_words(post.created_at)%>
+                Created: <%=time_ago_in_words(post.created_at)%> ago </br> 
+                by: <%=post.user.username%>
               </div>
             </div>
           <% end %>          

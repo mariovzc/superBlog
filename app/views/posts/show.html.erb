@@ -1,12 +1,13 @@
 <div class="row cells12">
   <div class="cell offset4 colspan6">
-    <h2 class="no-margin-top"><%=@post.title%></h2>
+    <h2 class="no-margin-top align-center leader"><%=@post.title%></h2>
     <hr class="bg-blue">
     <div class="text-accent" style="color:dimgrey">
       <%=@post.body%>           
       <br> <br>
       <div class="text-secondary">
-        Last Edit: <%=time_ago_in_words(@post.updated_at)%>
+        Last Edit: <%=time_ago_in_words(@post.updated_at)%>ago </br> 
+        by: <%=@post.user.username%>
       </div>
     </div>
     </br> </br>
