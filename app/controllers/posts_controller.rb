@@ -27,8 +27,8 @@ class PostsController < ApplicationController
   end
 
   def update
-    if @post.update(client_params)
-      redirect_to post(@post)
+    if @post.update(post_params)
+      redirect_to post_path(@post)
       flash[:success] = "Post Edited"
     else
       render :edit
