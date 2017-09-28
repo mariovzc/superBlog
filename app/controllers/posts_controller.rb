@@ -26,15 +26,17 @@ class PostsController < ApplicationController
   end
 
   def update
-    if @client.update(client_params)
-      
+    if @post.update(client_params)
+      redirect_to post(@post)
     else
       render :edit
     end
   end
   def destroy
-    if @post.destroy
-      redirect_to root_path
+    if current_user == @post.user
+      if @post.destroy
+        redirect_to root_path
+      end  
     end
   end
   private
