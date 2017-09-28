@@ -1,3 +1,19 @@
-<h1>Posts#index</h1>
-<p>Find me in app/views/posts/index.html.erb</p>
-<%= will_paginate @posts %>
+<div class="grid">
+    <div class="row cells4">
+        <div class="cell"></div>        
+        <div class="cell colspan2">
+            <ul class="h-menu user-menu">
+              <li><a href="#">New</a></li>
+              <li><a href="#">My Posts</a></li>
+              <li class=" no-hovered">
+                <form>
+                  <div class="input-control text" style="width: 250px; ">
+                    <input type="text" placeholder="Search...">
+                    <button class="button"><span class="mif-search"></span></button>
+                  </div>
+                </form>
+              </li>
+            </ul>
+        </div>
+    </div>
+</div>
