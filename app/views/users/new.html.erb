@@ -1,5 +1,6 @@
 <div class="register-form padding20 block-shadow" style="opacity: 1; transform: scale(1); transition: 0.5s;" id="register">
-  <%= form_for @user do |f| %>    
+  <%= form_for @user do |f| %>
+    <%= render 'shared/errors', object: f.object%>
     <h1 class="text-light">Registration</h1>
     <hr class="thin">
     <div class="input-control text full-size" data-role="input">
