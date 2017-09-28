@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root "posts#index"
 
   resources :posts
+  get '/user_posts', to: 'posts#user_posts', as: :user_posts
 
   get '/sign_up', to: 'users#new', as: :sign_up  
   resources :users, only: [:new, :create]
