@@ -2,37 +2,37 @@
   <%= form_for @user do |f| %>
     <%= render 'shared/errors', object: f.object%>
     <h1 class="text-light">Registration</h1>
-    <hr class="thin">
+    <hr class="thin"><br><br>
     <div class="input-control text full-size" data-role="input">
       <%= f.label :first_name %>
       <%= f.text_field :first_name, style: 'padding-right: 33px;' %>  
       <button class="button helper-button clear" tabindex="-1" type="button"><span class="mif-cross"></span></button>
-    </div>
+    </div> <br><br>
     <div class="input-control text full-size" data-role="input">
       <%= f.label :last_name %>
       <%= f.text_field :last_name, style: 'padding-right: 33px;' %>  
         <button class="button helper-button clear" tabindex="-1" type="button"><span class="mif-cross"></span></button>
-    </div>
+    </div><br><br>
     <div class="input-control text full-size" data-role="input">
       <%= f.label :username %>
       <%= f.text_field :username, style: 'padding-right: 33px;' %>  
       <button class="button helper-button clear" tabindex="-1" type="button"><span class="mif-cross"></span></button>
-    </div>
+    </div><br><br>
     <div class="input-control text full-size" data-role="input">
       <%= f.label :email %>
       <%= f.email_field :email, style: 'padding-right: 33px;' %>  
       <button class="button helper-button clear" tabindex="-1" type="button"><span class="mif-cross"></span></button>
-    </div>
+    </div><br><br>
     <div class="input-control password full-size" data-role="input">
       <%= f.label :password %>
       <%= f.password_field :password, class: 'padding-right: 33px' %>  
       <button class="button helper-button reveal" tabindex="-1" type="button"><span class="mif-looks"></span></button>
-    </div>
+    </div><br><br>
     <div class="input-control password full-size" data-role="input">
         <%= f.label :password_confirmation %>
         <%= f.password_field :password_confirmation, class: 'padding-right: 33px' %>  
         <button class="button helper-button reveal" tabindex="-1" type="button"><span class="mif-looks"></span></button>
-    </div>
+    </div><br><br>
     <div class="form-actions">
       <%= submit_tag 'Register', class: 'button primary' %>          
       <%= link_to  "Cancel", root_path, class: 'button link' %>
