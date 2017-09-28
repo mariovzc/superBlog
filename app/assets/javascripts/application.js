@@ -13,4 +13,5 @@
 //= require rails-ujs
 //= require turbolinks
 //= require metro.min
+//= require rails-timeago-all
 //= require_tree .

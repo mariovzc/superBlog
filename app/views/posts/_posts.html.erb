@@ -10,7 +10,7 @@
               <%= markdown(post.body.first(250)+ " .... ")%>
               <br> <br>
               <div class="text-secondary">
-                Created: <%=time_ago_in_words(post.created_at)%> ago </br> 
+                Creado: <%= timeago_tag post.created_at, :lang => :es %></br> 
                 by: <%=post.user.username%>
               </div>
             </div>

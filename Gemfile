@@ -16,6 +16,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'sorcery'
 gem 'will_paginate', '~> 3.1.0'
 gem 'redcarpet'
+gem 'rails-timeago', '~> 2.0'
 
 
 group :development, :test do
