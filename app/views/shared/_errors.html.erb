@@ -2,7 +2,7 @@
 <script>
   $.Notify({
     caption: "The form contains <%= pluralize(object.errors.count, 'error') %>.",
-    content: "<ul><% object.errors.full_messages.each do |msg| %><li>* <%= msg %></li><% end %></ul>",
+    content: "<ul><% object.errors.full_messages.each do |msg| %><li><%= msg %></li><% end %></ul>",
     type: "alert"
   });
 </script>

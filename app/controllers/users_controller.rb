@@ -12,7 +12,6 @@ class UsersController < ApplicationController
       flash[:success] = 'Welcome!'
       redirect_to root_path
     else
-      flash[:warning] = 'Wrong Information!'
       render :new
     end
   end
