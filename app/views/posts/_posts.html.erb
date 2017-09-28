@@ -4,7 +4,7 @@
         <% @posts.each do |post| %>
         <li>
           <%= link_to  post_path(post) do %>            
-            <h2 class="no-margin-top leader"><%=post.title%></h2>
+            <h2 class="no-margin-top leader" style="font-size: 3rem;"><strong><%=post.title.capitalize%></strong></h2>
             <hr class="bg-blue">
             <div class="text-accent" style="color:dimgrey">
               <%= markdown(post.body.first(250)+ " .... ")%>
@@ -24,8 +24,10 @@
       </ul>
       <br><br>
       <div class="align-center">
-          <%= will_paginate @posts %>
-      </div>      
+          <div class="digg_pagination">
+            <%= will_paginate @posts, :container => false %>
+          </div>
+      </div>
     </div>
     <div class="cell"></div>
 </div>
