@@ -1,3 +1,17 @@
-// Place all the styles related to the user controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.register-form {
+  width: 25rem;
+  height: auto;
+  position: fixed;
+  margin-top: 1rem;
+  left: 50%;
+  margin-left: -12.5rem;
+  background-color: #ffffff;
+  opacity: 0;
+  -webkit-transform: scale(.8);
+  transform: scale(.8);
+  form{
+    div{
+      margin-top: 20px;
+    }
+  }
+}
