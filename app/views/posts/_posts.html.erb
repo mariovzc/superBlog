@@ -1,0 +1,27 @@
+<div class="row cells12">
+    <div class="cell offset3 colspan6">
+      <ul class="step-list">
+        <% @posts.each do |post| %>
+        <li>
+          <%= link_to  post_path(post) do %>            
+            <h2 class="no-margin-top"><%=post.title%></h2>
+            <hr class="bg-blue">
+            <div class="text-accent" style="color:dimgrey">
+              <%=truncate(post.body, lenght: 40, separator: '', omission: '... (More)')%>
+              <br> <br>
+              <div class="text-secondary">
+                Created: <%=time_ago_in_words(post.created_at)%>
+              </div>
+            </div>
+          <% end %>          
+          </br> </br>
+          <% if current_user == post.user%>
+          <button class="button primary">Editar</button>
+          <button class="button primary">Borrar</button>
+          <%end%>
+        </li>
+        <% end %>
+      </ul>      
+    </div>
+    <div class="cell"></div>
+</div>
