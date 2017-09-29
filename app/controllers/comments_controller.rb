@@ -2,14 +2,14 @@ class CommentsController < ApplicationController
   def create
     @comment = Comment.new(comment_params)
     if @comment.save
-      flash[:success] = "Post Created"
+      flash[:success] = "Comentario Eliminado"
       redirect_to post_path(@comment.post)
     end
   end
   def destroy
     @comment = Coment.find(params[:id])
     if @comment.destroy
-      flash[:success] = "Post Deleted"
+      flash[:success] = "Comentario Borrado"
       redirect_to :back
     end
   end

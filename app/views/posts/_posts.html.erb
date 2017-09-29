@@ -25,7 +25,7 @@
       <br><br>
       <div class="align-center">
           <div class="digg_pagination">
-            <%= will_paginate @posts, :container => false %>
+            <%= will_paginate @posts, :container => false ,previous_label: t("Anterior"), next_label:  t("Siguiente")%>
           </div>
       </div>
     </div>

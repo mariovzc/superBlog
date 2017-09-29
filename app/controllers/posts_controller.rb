@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   skip_before_action :require_login, only: [:index, :show]
-  before_action :set_post, only: [:edit, :show,:update,:destroy]
+  before_action :user_post, only: [:edit,:update,:destroy]
+  before_action :set_post, only: [:show]
   
   def index
     @posts = Post.order('created_at DESC').paginate(:page => params[:page], :per_page => 5)    
@@ -13,7 +14,7 @@ class PostsController < ApplicationController
   def create
     @post = current_user.posts.new(post_params)
     if @post.save
-      flash[:success] = "Post Created"
+      flash[:success] = "Post Creado"
       redirect_to root_path
     else
       render :new
@@ -33,7 +34,7 @@ class PostsController < ApplicationController
   def update
     if @post.update(post_params)
       redirect_to post_path(@post)
-      flash[:success] = "Post Edited"
+      flash[:success] = "Post Editado"
     else
       render :edit
     end
@@ -41,7 +42,7 @@ class PostsController < ApplicationController
   def destroy
     if current_user == @post.user
       if @post.destroy
-        flash[:success] = "Post Deleted"        
+        flash[:success] = "Post Eliminado"        
         redirect_to root_path
       end  
     end
@@ -49,6 +50,9 @@ class PostsController < ApplicationController
   private
 
   def set_post
+    @post = Post.find(params[:id])
+  end
+  def user_post
     @post = current_user.posts.find(params[:id])
   end
 

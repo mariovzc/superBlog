@@ -3,5 +3,5 @@ class Comment < ApplicationRecord
   belongs_to :user
 
   validates :body,
-  presence: { message: "can't be blank"}
+  presence: { message: "No puede estar en blanco"}
 end

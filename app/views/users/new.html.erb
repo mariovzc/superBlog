@@ -1,41 +1,41 @@
 <div class="register-form padding20 block-shadow" style="opacity: 1; transform: scale(1); transition: 0.5s;" id="register">
   <%= form_for @user do |f| %>
-    <%= render 'shared/errors', object: f.object%>
-    <h1 class="text-light">Registration</h1>
+    <h1 class="text-light">Registro</h1>
     <hr class="thin"><br><br>
     <div class="input-control text full-size" data-role="input">
-      <%= f.label :first_name %>
+      <%= f.label :first_name, 'Primer Nombre' %>
       <%= f.text_field :first_name, style: 'padding-right: 33px;' %>  
       <button class="button helper-button clear" tabindex="-1" type="button"><span class="mif-cross"></span></button>
     </div> <br><br>
     <div class="input-control text full-size" data-role="input">
-      <%= f.label :last_name %>
+      <%= f.label :last_name , 'Apellido'%>
       <%= f.text_field :last_name, style: 'padding-right: 33px;' %>  
         <button class="button helper-button clear" tabindex="-1" type="button"><span class="mif-cross"></span></button>
     </div><br><br>
     <div class="input-control text full-size" data-role="input">
-      <%= f.label :username %>
+      <%= f.label :username,'Usuario'%>
       <%= f.text_field :username, style: 'padding-right: 33px;' %>  
       <button class="button helper-button clear" tabindex="-1" type="button"><span class="mif-cross"></span></button>
     </div><br><br>
     <div class="input-control text full-size" data-role="input">
-      <%= f.label :email %>
+      <%= f.label :email, 'Correo'%>
       <%= f.email_field :email, style: 'padding-right: 33px;' %>  
       <button class="button helper-button clear" tabindex="-1" type="button"><span class="mif-cross"></span></button>
     </div><br><br>
     <div class="input-control password full-size" data-role="input">
-      <%= f.label :password %>
+      <%= f.label :password, 'Contraseña' %>
       <%= f.password_field :password, class: 'padding-right: 33px' %>  
       <button class="button helper-button reveal" tabindex="-1" type="button"><span class="mif-looks"></span></button>
     </div><br><br>
     <div class="input-control password full-size" data-role="input">
-        <%= f.label :password_confirmation %>
+        <%= f.label :password_confirmation, 'Confirmar contraseña' %>
         <%= f.password_field :password_confirmation, class: 'padding-right: 33px' %>  
         <button class="button helper-button reveal" tabindex="-1" type="button"><span class="mif-looks"></span></button>
     </div><br><br>
     <div class="form-actions">
-      <%= submit_tag 'Register', class: 'button primary' %>          
-      <%= link_to  "Cancel", root_path, class: 'button link' %>
+      <%= submit_tag 'Registrarse', class: 'button primary' %>          
+      <%= link_to  "Cancelar", root_path, class: 'button link' %>
     </div>
+    <%= render 'shared/errors', object: f.object%>    
   <% end %>
 </div>

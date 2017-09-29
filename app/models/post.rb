@@ -3,6 +3,6 @@ class Post < ApplicationRecord
   has_many :comments
   validates :title,
   :body,
-  presence: { message: "can't be blank"}
-  validates :body, length: { minimum: 6 , message: 'is too short (minimum is 6 characters)'}
+  presence: { message: "No puede estar vacio"}
+  validates :body, length: { minimum: 250 , message: 'El minimo de caracteres es 250'}
 end

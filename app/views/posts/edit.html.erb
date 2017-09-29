@@ -1,8 +1,8 @@
 <div class="register-form padding20 block-shadow" style="opacity: 1; transform: scale(1); transition: 0.5s;" id="register">
     <%= form_for @post do |f| %>    
-      <h1 class="text-light">New Post</h1>
+      <h1 class="text-light">Editar Post</h1>
       <hr class="thin">
       <%=render 'shared/errors', object: f.object%>
-      <%=render 'form', f: f ,action: 'Edit'%>
+      <%=render 'form', f: f ,action: 'Editar'%>
     <%end%>
 </div>  

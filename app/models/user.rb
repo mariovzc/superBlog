@@ -6,20 +6,20 @@ class User < ApplicationRecord
   
   #Validations
   validates :password,
-            length: { minimum: 6 , message: 'is too short (minimum is 6 characters)'},
-            confirmation: {message: 'You must confirm your password'}
+            length: { minimum: 6 , message: 'El minimo de caracteres es 6'},
+            confirmation: {message: 'Debes confirmar tu contraseña'}
   
   validates :username,
-            uniqueness: {message: "has already been taken"} ,
-            length: { minimum: 6, message: 'is too short (minimum is 6 characters)' },case_sensitive: false
+            uniqueness: {message: "Ya esta en uso"} ,
+            length: { minimum: 6, message: 'es demasiado corto, el minimo de caracteres es 6' },case_sensitive: false
   
   validates :email,
-            uniqueness: {message: "has already been taken"},
-            presence: { message: "can't be blank"},case_sensitive: false
+            uniqueness: {message: "Ya esta en uso"},
+            presence: { message: "No puede estar en blanco"},case_sensitive: false
 
   validates :username,
             :last_name,
             :first_name ,
-            presence: { message: "can't be blank"}
+            presence: { message: "Ya esta en uso"}
   
 end

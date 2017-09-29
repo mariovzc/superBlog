@@ -13,5 +13,6 @@
 .user-menu{
   box-shadow: 2px 2px 2px 2px #888888;
   margin: 0 auto !important;
-  width: 300px;
+  width: auto;
+  max-width: 340px;
 }
