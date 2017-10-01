@@ -2,7 +2,9 @@ Rails.application.routes.draw do
 
   root "posts#index"
 
-  resources :posts
+  resources :posts do
+    resources :comments, only: [:create, :destroy]
+  end
   get '/user_posts', to: 'posts#user_posts', as: :user_posts
 
   get '/sign_up', to: 'users#new', as: :sign_up  
