@@ -5,15 +5,15 @@ class CommentsController < ApplicationController
     @comment.user_id = current_user.id
     if @comment.save
       flash[:success] = "Comentario Eliminado"
-      redirect_to post_path(@comment.post)
+      redirect_to post_path(@post)
     end
   end
 
   def destroy
-    @comment = Coment.find(params[:id])
+    @comment = @post.comments.find(params[:id])
     if @comment.destroy
       flash[:success] = "Comentario Borrado"
-      redirect_to :back
+      redirect_to post_path(@post)      
     end
   end
 
