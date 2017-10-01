@@ -1,14 +1,14 @@
-<%= form_tag sessions_path, method: :post do %>
-  <h4 class="text-light">Login to service</h4>
-  <hr class="thin">
-  <div class="input-control text" data-role="input">
-    <%= email_field_tag :email, nil, style: 'padding-right: 33px;', required: true, placeholder: 'Correo electronico' %>  
-  </div>
-  <div class="input-control password" data-role="input">
-      <%= password_field_tag :password, nil, class: 'padding-right: 33px', required: true, placeholder: 'Contraseña' %>  
-  </div>
-  <div class="form-actions">
-      <%= submit_tag 'Log In', class: 'button primary' %>          
-      <button class="button link">Cancel</button>    
+<%= form_tag sessions_path ,class: '', method: :post do %>
+  </br></br>
+  <div class="container-fluid">
+    <div class="form-group">
+      <%= label_tag :email, "Correo electronico" %>    
+      <%= email_field_tag :email, nil, class: 'form-control', required: true, placeholder: 'Correo electronico' %>  
+    </div>
+    <div class="form-group">
+        <%= label_tag :email, "Contraseña" %>    
+        <%= password_field_tag :password, nil, class: 'form-control', required: true, placeholder: 'Contraseña' %>  
+    </div>
+    <%= submit_tag 'Log In', class: 'btn btn-primary' %>          
   </div>
 <% end %>
