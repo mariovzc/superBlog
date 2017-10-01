@@ -1,7 +1,8 @@
 class CommentsController < ApplicationController
   before_action :set_post, only: [:create, :destroy]
   def create
-    @comment = Comment.new(comment_params)
+    @comment = @post.comments.new(comment_params)
+    @comment.user_id = current_user.id
     if @comment.save
       flash[:success] = "Comentario Eliminado"
       redirect_to post_path(@comment.post)
@@ -23,6 +24,6 @@ class CommentsController < ApplicationController
   end
 
   def set_post
-    @post = Post.find(params[:id])    
+    @post = Post.find(params[:post_id])    
   end
 end
