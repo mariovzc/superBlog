@@ -2,12 +2,11 @@
     <tr>
       <th>Commenter</th>
       <th>Body</th>
-      <th>Post</th>
     </tr>
   
   <% @comments.each do |comment| %>
     <tr>
-      <td><%= comment.commenter %></td>
+      <td><%= comment.user %></td>
       <td><%= comment.body %></td>
     </tr>
   <% end %>
