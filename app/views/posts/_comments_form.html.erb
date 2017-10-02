@@ -1,10 +1,12 @@
 <%= form_for([@comment.post, @comment]) do |f| %>
   <%=render 'shared/errors', object: f.object%>
-  <div class="field">
-    <%= f.label :body %><br />
-    <%= f.text_area :body %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="comment-form">
+    <div class="box">
+      <div class="actions">
+          <%= f.text_area :body, class: 'form-control', placeholder: 'Agrega un comentario.....', required: true %>
+          <small>** Acepta MarkDown **</small>
+          <%= f.submit 'Comentar', class: 'btn btn-primary' %>
+      </div>
+    </div>
   </div>
 <% end %>
