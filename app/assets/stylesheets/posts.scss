@@ -1,6 +1,6 @@
 @import 'main';
 .container{
-  background-color: $post-bg;
+  background-color: #FFFFFF;
 }
 .post{
 
@@ -65,8 +65,58 @@
   .post-actions{
     text-align: center
   }
-  pre{
-    background-color: rgba(0, 0, 0, 0.03);
+}
+.comments{
+  margin: 30px;
+  background: rgba(240, 240, 240, 0.24);
+  box-shadow: 0 1px 4px rgba(0,0,0,.04);
+  border: 1px solid rgba(0,0,0,.09);
+  border-radius: 3px;
+  .actions{
+    float: right;
+    margin-right: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: 1px solid $hover-color;
+    border-radius: 50px;
+    width: 25px;
+    text-align: center;
+    &:hover{
+      background-color: $hover-color;
+      a{
+        color: whitesmoke;
+        text-decoration: none;
+      }
+    }
+
+  }
+  .box{
+    margin-top: -40px;
+    padding: 20px;
+    p{
+      font-size: 18px;
+      line-height: 1.58;
+      letter-spacing: -.004em;
+      font-family: medium-content-serif-font,Georgia,Cambria,"Times New Roman",Times,serif;
+    }
+    .box-footer{
+      display: inline-flex;
+      display: -webkit-inline-flex;
+
+      div{
+        margin: 0px 10px;
+      }
+      .user-info{
+        font-size: 15px;
+        font-style: italic;
+        margin-top: 0;
+        color: #777;
+        text-align: center;
+        a{
+          color: $hover-color;
+        }
+      }
+    }      
   }
 }
 

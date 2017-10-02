@@ -1,16 +1,21 @@
-<table>
-    <tr>
-      <th>Commenter</th>
-      <th>Body</th>
-      <th>Delete</th>
-    </tr>
-  
-  <% @comments.each do |comment| %>
-    <tr>
-      <td><%= comment.user %></td>
-      <td><%= comment.body %></td>
-      <td><%= link_to 'Borrar', [comment.post, comment], :confirm => 'Seguro?', :method => :delete %></td>      
-      
-    </tr>
-  <% end %>
-  </table>
+<% @comments.each do |comment| %>
+    <% if comment.user %>
+      <div class="comments">
+        <% if current_user == comment.user %>
+          <div class="actions">
+            <%= link_to 'x', [comment.post, comment], :confirm => 'Seguro?', :method => :delete %>
+          </div>
+        <% end %>
+        <div class="box">
+          <p>
+            <%= markdown(comment.body) %>
+          </p>
+          <div class="box-footer">
+            <div class="user-info">
+              Creado por: <a href="javascript:void(0);"><%= comment.user.username %></a>, <%= timeago_tag @post.created_at, :lang => :es %>
+            </div>  
+          </div>
+        </div>
+      </div>
+    <% end %>
+<% end %>
