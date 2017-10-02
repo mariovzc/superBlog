@@ -1,14 +1,16 @@
-<br>
-<div class="input-control text full-size" data-role="input">
-  <%= f.label :title, 'Titulo' %>
-  <%= f.text_field :title, style: 'padding-right: 33px;', required: false %>  
-  <button class="button helper-button clear" tabindex="-1" type="button"><span class="mif-cross"></span></button>
-</div><br><br>
-<div class="input-control textarea full-size" data-role="input">
-  <%= f.label :body, 'Cuerpo' %>
-  <%= f.text_area :body, style: 'padding-right: 33px;', required: false %>  
-  <button class="button helper-button clear" tabindex="-1" type="button"><span class="mif-cross"></span></button>
-</div><br><br>
-  <%= f.submit action, class: 'button primary' %>          
-  <%= link_to  "Cancelar", root_path, class: 'button link' %>
+<div class="row">
+  <div class="col-md-12 col-md-offset-6">
+    <div class="form-group">
+      <%= f.label :title, 'Titulo' %>
+      <%= f.text_field :title, class: 'form-control'%>
+    </div>
+    <div class="form-group">
+      <%= f.label :body, 'Cuerpo' %>
+      <%= f.text_area :body, class: 'form-control' %>        
+    </div>
+    <div class="form-actions">
+      <%= f.submit action, class: 'btn  btn-primary' %>          
+      <%= link_to  "Cancelar", root_path, class: 'btn btn-secondary' %>      
+    </div>
+  </div>
 </div>
