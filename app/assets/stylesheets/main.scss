@@ -12,5 +12,21 @@ body{
   .sub-nav{
     background-color: $black-header;
     height: 48px;
+    div{
+      display: table !important;
+      margin: 0 auto !important;
+      ul{
+        list-style: none;
+        display: -webkit-inline-flex;
+        display: inline-flex;
+        li{
+          margin-left: 20px; 
+          color: $white-color;
+          a{
+            color: $white-color;            
+          }
+        }
+      }
+    }
   }
 }
