@@ -23,7 +23,11 @@ body{
           margin-left: 20px; 
           color: $white-color;
           a{
-            color: $white-color;            
+            color: $white-color;
+            &:hover{
+              color: $hover-color;
+              text-decoration: none;
+            }            
           }
         }
       }
