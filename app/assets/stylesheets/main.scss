@@ -1,0 +1,16 @@
+
+$black-header: #2F2F2F;
+$black-bg: #212121;
+$blue-color: #006F94;
+$white-color: #F8F8F8;
+$hover-color: #0085A1;
+$post-bg: #F4F4F4;
+
+
+body{
+  background-color: $black-bg !important;
+  .sub-nav{
+    background-color: $black-header;
+    height: 48px;
+  }
+}
