@@ -33,4 +33,11 @@ body{
       }
     }
   }
+  .btn-primary{
+    background-color: $hover-color !important;
+  }
+  .btn-secondary{
+    background-color: $blue-color !important;
+    color: $white-color !important;
+  }
 }
