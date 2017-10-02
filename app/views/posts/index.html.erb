@@ -1,14 +1,26 @@
-<div class="grid">
-    <%if current_user%>
-      <div class="row cells12">
-          <div class="cell offset2 colspan8">
-              <ul class="h-menu user-menu">
-                <li><%=link_to 'Nuevo', new_post_path%></li>
-                <li><%=link_to 'Todos', root_path%></li>
-                <li><%=link_to 'Mis Posts', user_posts_path%></li>
-              </ul>
-          </div>
+<div class="row">
+  <div class="col-md-12 col-md-offset-4">
+    <% @posts.each do |post| %>
+      <div class="post container">
+        <h2><%= link_to  post.title, post_path(post) %></h2>
+        <small class="post-meta">Publicado por: <a href="javascript:void(0);"><%=post.user.username%></a> <%= timeago_tag post.created_at, :lang => :es %></small>
+        <p>
+          <%= markdown(post.body.first(250)+ " .... ")%>              
+        </p>
+        <div>
+          <% if current_user == post.user%>          
+            <%=render 'post_actions', post: post %>
+          <%end%>  
+        </div>            
       </div>
-    <% end %>
-    <%=render 'posts'%>
+      <hr>
+    <%end%>
+    <div>
+      <div class="align-center">
+        <div class="digg_pagination">
+          <%= will_paginate @posts, :container => false ,previous_label: t("Anterior"), next_label:  t("Siguiente")%>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
