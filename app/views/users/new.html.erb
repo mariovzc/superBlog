@@ -1,5 +1,6 @@
 <div class="register-form">
     <%= form_for @user do |f| %>
+    <%= render 'shared/errors', object: f.object%>
     <h1 class="text-light">Registro</h1>
     <hr>
     <div class="row">
@@ -46,6 +47,5 @@
       <%= submit_tag 'Registrarse', class: 'btn btn-primary' %>
       <%= link_to  "Cancelar", root_path, class: 'btn btn-secondary' %>
     </div>
-    <%= render 'shared/errors', object: f.object%>
   <% end %>
 </div>

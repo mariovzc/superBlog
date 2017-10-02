@@ -1,12 +1,21 @@
 <%if !object.errors.blank?%>
-<script>
-  $.Notify({
-    caption: "The form contains <%= pluralize(object.errors.count, 'error') %>.",
-    content: "<ul><% object.errors.full_messages.each do |msg| %><li><%= msg %></li><% end %></ul>",
-    type: "alert"
-  });
-</script>
-<%end%>
-
-
-
+  <div class="alert alert-danger alert-dismissible fade in" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">
+          X
+        </span>
+    </button>
+    <div class="alert-title">Verifica los campos</div>
+    <div class="row">
+        <div class="col-md-20">
+            <ul>
+              <% object.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+              <% end %>
+            </ul>
+        </div>
+        <div class="col-md-4">
+        </div>
+    </div>
+  </div>
+<% end %>
