@@ -1,21 +1,30 @@
-<div class="row cells12">
-  <div class="cell offset4 colspan6">
-    <h2 class="no-margin-top align-center leader"><%=@post.title%></h2>
-    <hr class="bg-blue">
-    <div class="text-accent" style="color:dimgrey">
-      <%=markdown(@post.body)%>           
+<div class="row">
+  <div class="col-md-12 col-md-offset-6 full-post">
+    <h2 class="align-center title"><%=@post.title%></h2>
+    <hr>
+    <div>
+      <div class="body">
+          <%=markdown(@post.body)%>          
+      </div>
       <br> <br>
+      <hr>
       <div class="text-secondary">
-        Last Edit: <%=time_ago_in_words(@post.updated_at)%>ago </br> 
-        by: <%=@post.user.username%>
+        Ultima Edicion: <%= timeago_tag @post.updated_at, :lang => :es %> </br> 
+        Creado por: <a href="javascript:void(0);"><%=@post.user.username%></a>
       </div>
     </div>
-    </br> </br>
+    </br>
     <% if current_user == @post.user%>          
-      <%=render 'post_actions', post: @post %>
+      <div class="post-actions">
+        <%=render 'post_actions', post: @post %>          
+      </div>
     <%end%>
-    <%= render 'comments'%>
-    <%= render 'comments_form'%>
+    <div class="post-comments">
+      <%= render 'comments'%>
+      <% if current_user %>
+        <%= render 'comments_form'%>    
+      <% end %>
+    </div>
   </div>
   <div class="cell"></div>
 </div>

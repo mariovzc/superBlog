@@ -31,6 +31,48 @@
     margin-top: -15px;
   }
 }
+
+.full-post{
+  .title{
+    color: $hover-color;
+    font-size: 70px !important;
+    font-weight: 800;
+    font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+    word-break: break-all;
+    text-align: center;
+  }
+  hr{
+    margin: 20px;
+  }
+  .body{
+    p{
+      font-size: 20px;
+      color: #333;
+      font-family: Lora,'Times New Roman',serif;
+      line-height: 1.5  
+    }
+  }
+  .text-secondary{
+    font-size: 18px;
+    font-style: italic;
+    margin-top: 0;
+    color: #777;
+    text-align: center;
+    a{
+      color: $hover-color;
+    }
+  }
+  .post-actions{
+    text-align: center
+  }
+  pre{
+    background-color: rgba(0, 0, 0, 0.03);
+  }
+}
+
+
+
+/*PAGINATION*/
 .pagination-container{
   display: table;
   margin: 0 auto;
