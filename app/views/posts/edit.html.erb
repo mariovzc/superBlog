@@ -1,8 +1,22 @@
+<header class="masthead" style="background-image: url('/assets/home-bg.jpg')">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="site-heading">
+          <h1>Editar Post</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
 <div id="register">
-    <%= form_for @post do |f| %>    
-      <h1 class="text-light">Editar Post</h1>
-      <hr class="thin">
-      <%=render 'shared/errors', object: f.object%>
-      <%=render 'form', f: f ,action: 'Editar'%>
-    <%end%>
+  <%= form_for @post do |f| %>
+  <div class="row">
+      <div class="col-lg-6 col-md-10 mx-auto">
+        <%=render 'shared/errors', object: f.object%>
+      </div>
+  </div>
+    <%=render 'form', f: f , action: 'Editar'%>
+  <%end%>
 </div>  
