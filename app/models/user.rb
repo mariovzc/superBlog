@@ -20,6 +20,6 @@ class User < ApplicationRecord
   validates :username,
             :last_name,
             :first_name ,
-            presence: { message: "Ya esta en uso"}
+            presence: { message: "No puede estar vacio"}
   
 end

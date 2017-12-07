@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   get '/user_posts', to: 'posts#user_posts', as: :user_posts
 
   get '/sign_up', to: 'users#new', as: :sign_up  
+  get '/users', to: 'users#new', as: :users  
+  
   resources :users, only: [:new, :create]
 
 
