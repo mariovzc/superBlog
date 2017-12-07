@@ -1,25 +1,36 @@
- <div class="login-form padding20 block-shadow" style="opacity: 1; transform: scale(1); transition: 0.5s;">
+<header class="masthead" style="background-image: url('/assets/home-bg.jpg')">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="site-heading">
+          <h1>Iniciar Sessión</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="login-form container">
   <%= form_tag sessions_path, method: :post do %>
-    <h1 class="text-light">Login to service</h1>
-    <hr class="thin">
-    <br>
-    <div class="input-control text full-size" data-role="input">
-      <%= label_tag :email %>
-      <%= email_field_tag :email, nil, style: 'padding-right: 33px;', required: true %>  
-      <button class="button helper-button clear" tabindex="-1" type="button"><span class="mif-cross"></span></button>
+    <div class="row">
+      <div class="col-lg-6 col-md-10 mx-auto">
+        <div class="form-group" >
+          <%= label_tag :email %>
+          <%= email_field_tag :email, nil, class: "form-control", required: true %>             
+        </div>
+      </div>     
     </div>
-    <br>
-    <br>
-    <div class="input-control password full-size" data-role="input">
-      <%= label_tag :password %>
-      <%= password_field_tag :password, nil, class: 'padding-right: 33px', required: true %>  
-      <button class="button helper-button reveal" tabindex="-1" type="button"><span class="mif-looks"></span></button>
+    <div class="row">
+      <div class="col-lg-6 col-md-10 mx-auto">
+        <div class="form-group" >
+          <%= label_tag :password, 'Contraseña' %>
+          <%= password_field_tag :password, nil, class: 'form-control', required: true %>  
+        </div>        
+      </div> 
     </div>
-    <br>
-    <br>
-    <div class="form-actions">
-      <%= submit_tag 'Log In', class: 'button primary' %>          
-      <%= link_to  "Cancel", root_path, class: 'button link' %>
+    <div class="text-center">
+      <%= submit_tag 'Iniciar Sesión', class: 'btn btn-primary' %>          
+      <%= link_to  "Cancelar", root_path, class: 'btn btn-secondary' %>
     </div>
   <% end %>
 </div>
