@@ -1,26 +1,33 @@
-<div class="row">
-  <div class="col-md-12 col-md-offset-6">
-    <% @posts.each do |post| %>
-      <div class="post container-fluid">
-        <h2><%= link_to  post.title, post_path(post) %></h2>
-        <small class="post-meta">Publicado por: <a href="javascript:void(0);"><%=post.user.username%></a> <%= timeago_tag post.created_at, :lang => :es %></small>
-        <p>
-          <%= markdown(post.body.first(250)+ " .... ")%>              
-        </p>
-        <div>
-          <% if current_user == post.user%>          
-            <%=render 'post_actions', post: post %>
-          <%end%>  
-        </div>            
-      </div>
-      <hr>
-    <%end%>
-    <div class="pagination-container">
-      <div class="align-center">
-        <div class="digg_pagination">
-          <%= will_paginate @posts, :container => false ,previous_label: t("Anterior"), next_label:  t("Siguiente"), page_links: false%>
+<header class="masthead" style="background-image: url('/assets/home-bg.jpg')">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="site-heading">
+          <h1>Super Blog</h1>
+          <span class="subheading">My clean blog example</span>
         </div>
       </div>
+    </div>
+  </div>
+</header>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-md-10 mx-auto">
+      <% @posts.each do |post| %>
+        <div class="post-preview">
+          <%= link_to post_path(post) do %>          
+            <h2 class="post-title">
+              <%= post.title.capitalize!%>
+            </h2>
+          <% end %>
+          <p class="post-meta">Publicado por
+            <a href="javascript:void(0);"><%=post.user.username%></a>
+            <%= time_ago_in_words (post.created_at)%>
+          </p>
+        </div>
+        <hr>      
+      <%end%>    
     </div>
   </div>
 </div>

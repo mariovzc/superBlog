@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
       redirect_to root_path
     else
       flash[:warning] = 'Correo o contraseña incorrectos'
-      redirect_to root_path
+      redirect_to log_in_path
     end
   end
 

@@ -3,7 +3,11 @@
       <div class="comments">
         <% if current_user == comment.user %>
           <div class="actions">
-            <%= link_to 'x', [comment.post, comment], :confirm => 'Seguro?', :method => :delete %>
+            <%= link_to [comment.post, comment], :confirm => 'Seguro?', :method => :delete do %>
+            <button type="button" class="close" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            <% end %>
           </div>
         <% end %>
         <div class="box">
@@ -12,7 +16,7 @@
           </p>
           <div class="box-footer">
             <div class="user-info">
-              Creado por: <a href="javascript:void(0);"><%= comment.user.username %></a>, <%= timeago_tag @post.created_at, :lang => :es %>
+              Creado por: <a href="javascript:void(0);"><%= comment.user.username %></a>, hace <%= time_ago_in_words (@post.created_at)%>
             </div>  
           </div>
         </div>

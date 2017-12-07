@@ -5,39 +5,3 @@ $blue-color: #006F94;
 $white-color: #F8F8F8;
 $hover-color: #0085A1;
 $post-bg: #F4F4F4;
-
-
-body{
-  background-color: $black-bg !important;
-  .sub-nav{
-    background-color: $blue-color;
-    height: 48px;
-    div{
-      display: table !important;
-      margin: 0 auto !important;
-      ul{
-        list-style: none;
-        display: -webkit-inline-flex;
-        display: inline-flex;
-        li{
-          margin-left: 20px; 
-          color: $white-color;
-          a{
-            color: $white-color;
-            &:hover{
-              text-decoration: none;
-              color: $hover-color;
-            }            
-          }
-        }
-      }
-    }
-  }
-  .btn-primary{
-    background-color: $hover-color !important;
-  }
-  .btn-secondary{
-    background-color: $blue-color !important;
-    color: $white-color !important;
-  }
-}
