@@ -16,6 +16,10 @@ gem 'sorcery'
 gem 'will_paginate', '~> 3.1.0'
 gem 'redcarpet'
 gem 'rails-timeago', '~> 2.0'
+gem 'jquery-rails'
+gem 'bootstrap', '~> 4.0.0.alpha6'
+gem 'xmlrpc'
+gem 'gravatar-ultimate'
 
 
 group :development, :test do

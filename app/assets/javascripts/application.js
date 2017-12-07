@@ -12,6 +12,8 @@
 //
 //= require rails-ujs
 //= require turbolinks
-//= require bootstrap
 //= require rails-timeago-all
 //= require_tree .
+//= require jquery3
+//= require popper
+//= require bootstrap
